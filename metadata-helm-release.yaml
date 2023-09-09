@@ -8,7 +8,7 @@ spec:
   releaseName: metadata-prod
   chart:
     spec:
-      chart: ./charts/metadata
+      chart: metadata
       sourceRef:
         kind: GitRepository
         name: metadata-helm-charts 
