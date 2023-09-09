@@ -21,7 +21,7 @@ spec:
       pullPolicy: IfNotPresent
       tag: "2023"
     ingress:
-      host: "metadata.local"
+      host: "prod.metadata.local"
     resources:
       limits:
         cpu: 100m
