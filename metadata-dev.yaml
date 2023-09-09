@@ -19,7 +19,7 @@ spec:
     image:
       repository: igrubio/metadata
       pullPolicy: IfNotPresent
-      tag: "2022"
+      tag: "2023"
     ingress:
       host: "dev.metadata.local"
     resources:
