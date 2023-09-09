@@ -1,0 +1,10 @@
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: GitRepository
+metadata:
+  name: metadata-helm-charts
+  namespace: fluxcd
+spec:
+  interval: 1m
+  url: https://github.com/rubioignacio/metadata-helm-charts.git
+  ref:
+    branch: main

@@ -1,0 +1,31 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: metadata-prod
+  namespace: fluxcd
+spec:
+  interval: 1m
+  releaseName: metadata-prod
+  chart:
+    spec:
+      chart: metadata
+      sourceRef:
+        kind: GitRepository
+        name: metadata-helm-charts 
+  values:
+    appName: metadata
+    namespace: production
+    replicaCount: 2
+    image:
+      repository: igrubio/metadata
+      pullPolicy: IfNotPresent
+      tag: "2023"
+    ingress:
+      host: "metadata.local"
+    resources:
+      limits:
+        cpu: 100m
+        memory: 128Mi
+      requests:
+        cpu: 100m
+        memory: 128Mi
