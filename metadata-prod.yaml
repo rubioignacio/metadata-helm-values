@@ -15,11 +15,11 @@ spec:
   values:
     appName: metadata
     namespace: production
-    replicaCount: 1
+    replicaCount: 2
     image:
       repository: igrubio/metadata
       pullPolicy: IfNotPresent
-      tag: "2022"
+      tag: "2023"
     ingress:
       host: "prod.metadata.local"
     resources:
